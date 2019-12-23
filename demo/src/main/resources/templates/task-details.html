@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html layout:decorator="layout">
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+
+        <title></title>
+
+    </head>
+     
+    <body>
+        <div layout:fragment="content">
+            
+
+        <h2 class="display alert alert-dark" th:text="${task.taskname}" >discription</h2>
+        <div class="alert alert-success"  th:text="${task.description}"></div>
+            
+
+        <div class="row">
+         
+              <a type="submit"  th:href="@{'/solve-task'(id=${task.id})}" class="btn btn-primary alert alert-success ml-3 " >Solve</a>
+          
+        </div>
+        </div>
+    </body>
+</html>

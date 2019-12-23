@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html layout:decorator="layout">
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+
+        <title></title>
+
+    </head>
+    <body>
+        <div  layout:fragment="content">
+        
+            <h2  th:text="${task.taskname}"  class= "display alert-dark" align="center">discription</h2>
+            <div th:text="${task.description}" class="display alert-info" align="center"></div>
+            <div class="row btn ">
+
+            
+                <form action="#" th:action="@{/submit-solve-task/{id}(id=${task.id})}"  th:object="${submission}" method="post">
+                    <div class="form-group row ">
+                        <textarea class="form-control ml-3" type="text" th:field="*{solve}" 
+                                  placeholder="solve" 
+                                  th:errorclass="is-invalid"
+                                  rows="4" cols="180"
+                                  ></textarea>                        
+                        <div class="invalid-feedback" style="display: block!important;"
+                             th:if="${#fields.hasErrors('solve')}" 
+                             th:errors="*{solve}">
+                            Please enter correct point!
+                        </div> 
+
+                    </div>
+                    <button type="submit" style="cursor:pointer" class="btn btn-primary alert alert-success" >submit</button>
+                    
+
+
+                </form>     
+
+            </div>
+        </div>
+    </body>
+</html>

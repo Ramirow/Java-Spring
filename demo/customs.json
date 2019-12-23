@@ -1,0 +1,29 @@
+{
+    "elements": {
+        "button": {
+            "attributes": {
+                "onclick": {}
+            }
+        },
+        "a": {
+            "attributes": {
+                "onclick": {},
+                "href": {},
+                "class": {}
+            }
+        }
+    },
+    "attributes": {
+        "th:text": {},
+        "th:if": {
+            "context": "div"
+        },
+        "th:action": {
+            "context": "form"
+        },
+        "th:each": {},
+        "th:name": {
+            "context": "input"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html layout:decorator="layout">
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+
+        <title></title>
+
+    </head>
+    <body>
+        <div layout:fragment="content">
+            <div class="container-fluid">
+
+            <h2 class="alert alert-secondary">Task list</h2>
+            <form  class="form-inline" action="#" th:action="@{/}" method="get">
+                <div class="form-group">
+                    <label for="search">Search</label>
+                    <input type="text" th:value="${search}" class="form-control mx-sm-4" id="search" name="search" placeholder="search" />
+                </div>
+            </form>
+            <div class="row">
+                <ul>
+                    <li th:each="s : ${task}">
+                        <a th:href="@{'/task-details'(id=${s.id})}" th:text="${s.taskname}" class="col-12 col-md-6 col-lg-4">task</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+            </div>
+    </body>
+</html>

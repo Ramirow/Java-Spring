@@ -1,0 +1,16 @@
+com\example\demo\DemoApplication.class
+com\example\demo\WebSecurityConfig.class
+com\example\demo\Repository\UserRepository.class
+com\example\demo\Controller\AuthController.class
+com\example\demo\Service\SubmissionService.class
+com\example\demo\Service\UserService.class
+com\example\demo\Service\TaskService.class
+com\example\demo\Entity\User.class
+com\example\demo\Entity\User$Role.class
+com\example\demo\Entity\Task.class
+com\example\demo\Entity\NewSubmission.class
+com\example\demo\Entity\Submission.class
+com\example\demo\Repository\SubmissionRepository.class
+com\example\demo\Repository\TaskRepository.class
+com\example\demo\Controller\DemoController.class
+com\example\demo\MyUserDetailsService.class
